@@ -12,16 +12,16 @@
     <!-- Open Graph (for social media sharing) -->
     <meta property="og:title" content="B&B Casetta Ninfa - Il Tuo Soggiorno a Sermoneta">
     <meta property="og:description" content="Un'oasi di pace e comfort vicino ai Giardini di Ninfa. Prenota il tuo soggiorno a Sermoneta.">
-    <meta property="og:image" content="assets/casetta-hero.jpg"> <!-- Sostituisci con il link all'immagine principale -->
-    <meta property="og:url" content="https://tuo-dominio.com"> <!-- Sostituisci con il tuo URL -->
+    <meta property="og:image" content="assets/casetta-hero.jpg">
+    <meta property="og:url" content="https://davidraikov69.github.io/casetta-ninfa-website/">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
     
     <!-- Hreflang for SEO -->
-    <link rel="alternate" hreflang="it" href="https://tuo-dominio.com/" />
-    <link rel="alternate" hreflang="en" href="https://tuo-dominio.com/" />
-    <link rel="alternate" hreflang="x-default" href="https://tuo-dominio.com/" />
+    <link rel="alternate" hreflang="it" href="https://davidraikov69.github.io/casetta-ninfa-website/" />
+    <link rel="alternate" hreflang="en" href="https://davidraikov69.github.io/casetta-ninfa-website/" />
+    <link rel="alternate" hreflang="x-default" href="https://davidraikov69.github.io/casetta-ninfa-website/" />
 
     <!-- Scripts and Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -233,12 +233,17 @@
                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Email Address</label>
                 <input type="email" name="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="tu@esempio.com"/>
               </div>
+
+              <!-- ===== BLOCCO MESSAGGIO CORRETTO ===== -->
               <div>
-                <label for="message" class="block text-sm font-medium text-gray-700 mb-1 lang-it">Messaggio</label>
-                <label for="message" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Message</label>
-                <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-it" placeholder="La tua richiesta o messaggio..."></textarea>
-                <textarea name="message" id="message-en" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-en hidden" placeholder="Your request or message..."></textarea>
+                <label for="message-it" class="block text-sm font-medium text-gray-700 mb-1 lang-it">Messaggio</label>
+                <label for="message-en" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Message</label>
+                
+                <textarea name="messaggio_italiano" id="message-it" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-it" placeholder="La tua richiesta o messaggio..."></textarea>
+                
+                <textarea name="message_english" id="message-en" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-en hidden" placeholder="Your request or message..."></textarea>
               </div>
+              <!-- ===== FINE BLOCCO MESSAGGIO CORRETTO ===== -->
               
               <div>
                 <button type="submit" class="w-full bg-brand-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg lang-it">Invia Messaggio</button>
