@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&B Casetta Ninfa - Il Tuo Soggiorno a Sermoneta</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Scopri il B&B Casetta Ninfa a Sermoneta Scalo. Camere accoglienti con angolo cottura, parcheggio gratuito e colazione inclusa. Vicino ai Giardini di Ninfa e alla stazione di Latina.">
+    <meta name="keywords" content="B&B Sermoneta, Casetta Ninfa, dormire Sermoneta, Giardini di Ninfa, alloggi Sermoneta, B&B Latina Scalo">
+    
+    <!-- Open Graph (for social media sharing) -->
+    <meta property="og:title" content="B&B Casetta Ninfa - Il Tuo Soggiorno a Sermoneta">
+    <meta property="og:description" content="Un'oasi di pace e comfort vicino ai Giardini di Ninfa. Prenota il tuo soggiorno a Sermoneta.">
+    <meta property="og:image" content="assets/casetta-hero.jpg"> <!-- Sostituisci con il link all'immagine principale -->
+    <meta property="og:url" content="https://tuo-dominio.com"> <!-- Sostituisci con il tuo URL -->
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+    
+    <!-- Hreflang for SEO -->
+    <link rel="alternate" hreflang="it" href="https://tuo-dominio.com/" />
+    <link rel="alternate" hreflang="en" href="https://tuo-dominio.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://tuo-dominio.com/" />
+
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#4A7C59',
+              'brand-secondary': '#F5D0A9',
+              'brand-accent': '#D48C70',
+              'brand-text': '#36454F',
+              'brand-light': '#F8F5F2',
+            },
+            fontFamily: {
+              sans: ['"Inter"', 'sans-serif'],
+              serif: ['"Lora"', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      html { scroll-behavior: smooth; }
+      .hidden { display: none; }
+    </style>
+</head>
+<body class="font-sans text-brand-text bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-brand-primary/90 text-brand-light sticky top-0 z-50 shadow-md backdrop-blur-md">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="#hero" class="text-2xl font-bold font-serif hover:text-brand-secondary transition-colors">
+            B&B Casetta Ninfa
+          </a>
+          <nav class="hidden md:flex items-center space-x-6">
+            <a href="#hero" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Home</a>
+            <a href="#hero" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">Home</a>
+
+            <a href="#about" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Chi Siamo</a>
+            <a href="#about" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">About Us</a>
+
+            <a href="#gallery" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Galleria</a>
+            <a href="#gallery" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">Gallery</a>
+
+            <a href="#contact" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Contatti</a>
+            <a href="#contact" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">Contact</a>
+            
+             <!-- Language Toggle -->
+            <button id="lang-toggle" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-light">
+                <span class="lang-it">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>
+                </span>
+                <span class="lang-en hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="b"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#b)"><path fill="#eee" d="M0 0h512v256H0z"/><path fill="#0052b4" d="M0 256h512v256H0z"/><path fill="#eee" d="m205.2 205.2-41.4-41.4-23.5 23.5 41.4 41.4v-83h-46.9l41.4 41.4-41.4 41.4h46.9v-83l-41.4 41.4 41.4 41.4 23.5-23.5-41.4-41.4zm101.6 101.6 41.4 41.4 23.5-23.5-41.4-41.4v83h46.9l-41.4-41.4 41.4-41.4h-46.9v83l41.4-41.4-41.4-41.4-23.5 23.5 41.4 41.4z"/><path fill="#d80027" d="M496 233.1H329.4L512 94.3V233zm-480 45.8H182.6L0 417.7V278.9zM16 278.9H182.6L0 139.8v139.1zM496 45.8H329.4L512 184.2V45.8zM212.1 0l-55.5 121-55.5-121H0v16h111.4l45.2 98.6L201.7 16V0h10.4zm87.8 512 55.5-121L410.9 512H512v-16H400.6l-45.2-98.6-45.1 98.6v16h-10.5z"/><path fill="#eee" d="M341.3 0H170.7L0 121v135h121L0 341.3v170.7h170.7L341.3 512h170.7l-170.6-121V256h121L512 170.7V0z"/><path fill="#d80027" d="M233.1 16h45.8v480h-45.8zM16 233.1h480v45.8H16z"/></g></svg>
+                </span>
+            </button>
+          </nav>
+          <div class="md:hidden flex items-center">
+            <!-- Mobile Language Toggle -->
+            <button id="lang-toggle-mobile" class="p-2 mr-2 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-light">
+                 <span class="lang-it">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="a-mob"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#a-mob)"><path fill="#eee" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>
+                </span>
+                <span class="lang-en hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="b-mob"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#b-mob)"><path fill="#eee" d="M0 0h512v256H0z"/><path fill="#0052b4" d="M0 256h512v256H0z"/><path fill="#eee" d="m205.2 205.2-41.4-41.4-23.5 23.5 41.4 41.4v-83h-46.9l41.4 41.4-41.4 41.4h46.9v-83l-41.4 41.4 41.4 41.4 23.5-23.5-41.4-41.4zm101.6 101.6 41.4 41.4 23.5-23.5-41.4-41.4v83h46.9l-41.4-41.4 41.4-41.4h-46.9v83l41.4-41.4-41.4-41.4-23.5 23.5 41.4 41.4z"/><path fill="#d80027" d="M496 233.1H329.4L512 94.3V233zm-480 45.8H182.6L0 417.7V278.9zM16 278.9H182.6L0 139.8v139.1zM496 45.8H329.4L512 184.2V45.8zM212.1 0l-55.5 121-55.5-121H0v16h111.4l45.2 98.6L201.7 16V0h10.4zm87.8 512 55.5-121L410.9 512H512v-16H400.6l-45.2-98.6-45.1 98.6v16h-10.5z"/><path fill="#eee" d="M341.3 0H170.7L0 121v135h121L0 341.3v170.7h170.7L341.3 512h170.7l-170.6-121V256h121L512 170.7V0z"/><path fill="#d80027" d="M233.1 16h45.8v480h-45.8zM16 233.1h480v45.8H16z"/></g></svg>
+                </span>
+            </button>
+            <button id="mobile-menu-button" aria-label="Apri menu" aria-expanded="false" class="p-2 rounded-md hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-light">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" id="menu-icon-svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-brand-primary shadow-xl py-2">
+        <nav class="flex flex-col items-center space-y-3 px-4 pb-4">
+          <a href="#hero" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-it">Home</a>
+          <a href="#hero" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-en hidden">Home</a>
+
+          <a href="#about" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-it">Chi Siamo</a>
+          <a href="#about" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-en hidden">About Us</a>
+          
+          <a href="#gallery" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-it">Galleria</a>
+          <a href="#gallery" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-en hidden">Gallery</a>
+
+          <a href="#contact" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-it">Contatti</a>
+          <a href="#contact" class="mobile-nav-link text-lg font-medium hover:text-brand-secondary w-full text-center lang-en hidden">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section id="hero" class="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0">
+          <img src="assets/casetta-hero.jpg" alt="Splendida vista dal B&B Casetta Ninfa" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div class="relative z-10 p-8 max-w-3xl">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 font-serif leading-tight lang-it">La Tua Oasi di Pace a Sermoneta</h1>
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 font-serif leading-tight lang-en hidden">Your Oasis of Peace in Sermoneta</h1>
+
+          <p class="text-xl md:text-2xl mb-8 font-light lang-it">Vivi un comfort unico e un'ospitalità calorosa a due passi dai Giardini di Ninfa e dal borgo medievale.</p>
+          <p class="text-xl md:text-2xl mb-8 font-light lang-en hidden">Experience unique comfort and warm hospitality, just a stone's throw from the Gardens of Ninfa and the medieval village.</p>
+          
+          <a href="#contact" class="bg-brand-accent hover:bg-opacity-80 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg lang-it">Richiedi Disponibilità</a>
+          <a href="#contact" class="bg-brand-accent hover:bg-opacity-80 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg lang-en hidden">Request Availability</a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-16 md:py-24 bg-brand-secondary/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-it">Benvenuti a Casetta Ninfa</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-en hidden">Welcome to Casetta Ninfa</h2>
+
+            <div class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed lang-it">
+                <p class="mb-4">Situato a Sermoneta Scalo, il B&B Casetta Ninfa è il rifugio perfetto per chi cerca tranquillità senza rinunciare alla comodità. Le nostre camere, adatte anche per gli amici a quattro zampe, sono dotate di aria condizionata, bagno privato e un balcone per godersi l'aria fresca.</p>
+                <p>La posizione strategica, a soli 5 km dalla stazione di Latina, ci rende la base ideale per esplorare le meraviglie locali: dall'incantevole borgo medievale di Sermoneta ai famosi <strong>Giardini di Ninfa</strong>. Valutato <strong>10/10</strong> per la posizione eccellente!</p>
+            </div>
+             <div class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed lang-en hidden">
+                <p class="mb-4">Located in Sermoneta Scalo, B&B Casetta Ninfa is the perfect retreat for those seeking tranquility without sacrificing convenience. Our pet-friendly rooms are equipped with air-conditioning, a private bathroom, and a balcony to enjoy the fresh air.</p>
+                <p>Our strategic location, just 5 km from Latina station, makes us the ideal base for exploring local wonders: from the enchanting medieval village of Sermoneta to the famous <strong>Gardens of Ninfa</strong>. Rated <strong>10/10</strong> for our excellent location!</p>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                  <div class="text-brand-primary mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3.75h.162c.324 0 .624.16.802.423l3.375 4.5a.75.75 0 010 .854l-3.375 4.5a.802.802 0 01-.802.423h-.162m-15 0h.162c.324 0 .624-.16.802-.423l3.375-4.5a.75.75 0 000-.854l-3.375-4.5a.802.802 0 00-.802-.423H3.75" /></svg>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2 text-brand-text font-serif lang-it">Parcheggio Gratuito</h3>
+                  <h3 class="text-xl font-semibold mb-2 text-brand-text font-serif lang-en hidden">Free Parking</h3>
+                  <p class="text-gray-600 leading-relaxed lang-it">Arriva e parcheggia senza pensieri. Offriamo un comodo parcheggio gratuito per tutti i nostri ospiti.</p>
+                  <p class="text-gray-600 leading-relaxed lang-en hidden">Arrive and park without worries. We offer convenient free parking for all our guests.</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                  <div class="text-brand-primary mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375" /></svg>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2 text-brand-text font-serif lang-it">Colazione Italiana</h3>
+                  <h3 class="text-xl font-semibold mb-2 text-brand-text font-serif lang-en hidden">Italian Breakfast</h3>
+                  <p class="text-gray-600 leading-relaxed lang-it">Inizia la giornata con il piede giusto gustando una deliziosa colazione all'italiana, inclusa nel soggiorno.</p>
+                  <p class="text-gray-600 leading-relaxed lang-en hidden">Start your day on the right foot with a delicious Italian-style breakfast, included with your stay.</p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                  <div class="text-brand-primary mb-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2 text-brand-text font-serif lang-it">Camere con Angolo Cottura</h3>
+                  <h3 class="text-xl font-semibold mb-2 text-brand-text font-serif lang-en hidden">Rooms with Kitchenette</h3>
+                  <p class="text-gray-600 leading-relaxed lang-it">Ogni camera è dotata di angolo cottura con frigo e macchina del caffè per la massima autonomia.</p>
+                  <p class="text-gray-600 leading-relaxed lang-en hidden">Each room features a kitchenette with a refrigerator and coffee machine for your convenience.</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="py-16 md:py-24 bg-brand-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-it">I Nostri Spazi</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-en hidden">Our Spaces</h2>
+            <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed lang-it">Uno sguardo alla serenità e alla bellezza che vi aspettano.</p>
+            <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed lang-en hidden">A glimpse into the serenity and beauty that await you.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="overflow-hidden rounded-xl shadow-lg group"><img src="assets/casetta-gallery1.jpg" alt="Camera accogliente" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"/></div>
+            <div class="overflow-hidden rounded-xl shadow-lg group"><img src="assets/casetta-gallery2.jpg" alt="Angolo cottura" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"/></div>
+            <div class="overflow-hidden rounded-xl shadow-lg group"><img src="assets/casetta-gallery3.jpg" alt="Vista dal balcone" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"/></div>
+            <div class="overflow-hidden rounded-xl shadow-lg group"><img src="assets/casetta-gallery4.jpg" alt="Esterno della Casetta" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"/></div>
+            <div class="overflow-hidden rounded-xl shadow-lg group"><img src="assets/casetta-gallery5.jpg" alt="Dettaglio arredo" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"/></div>
+            <div class="overflow-hidden rounded-xl shadow-lg group"><img src="assets/casetta-gallery6.jpg" alt="Colazione" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"/></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-16 md:py-24 bg-brand-secondary/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+          <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-it">Contattaci</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-en hidden">Contact Us</h2>
+            <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed lang-it">Hai domande o sei pronto a prenotare il tuo soggiorno? Scrivici o chiamaci!</p>
+            <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed lang-en hidden">Have questions or ready to book your stay? Write or call us!</p>
+          </div>
+          
+          <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl max-w-2xl w-full">
+            <h3 class="text-3xl font-bold text-brand-text mb-8 text-center font-serif lang-it">Mettiti in Contatto</h3>
+            <h3 class="text-3xl font-bold text-brand-text mb-8 text-center font-serif lang-en hidden">Get in Touch</h3>
+            
+            <form id="contactForm" class="space-y-6" action="https://formspree.io/f/xpwrgllr" method="POST">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1 lang-it">Nome Completo</label>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Full Name</label>
+                <input type="text" name="name" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="Mario Rossi"/>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1 lang-it">Indirizzo Email</label>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Email Address</label>
+                <input type="email" name="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="tu@esempio.com"/>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1 lang-it">Messaggio</label>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Message</label>
+                <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-it" placeholder="La tua richiesta o messaggio..."></textarea>
+                <textarea name="message" id="message-en" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-en hidden" placeholder="Your request or message..."></textarea>
+              </div>
+              
+              <div>
+                <button type="submit" class="w-full bg-brand-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg lang-it">Invia Messaggio</button>
+                <button type="submit" class="w-full bg-brand-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg lang-en hidden">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/393403927781?text=Ciao!%20Sono%20interessato%20al%20B&B%20Casetta%20Ninfa%20e%20vorrei%20saperne%20di%20più." target="_blank" rel="noopener noreferrer" aria-label="Chat su WhatsApp" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 z-40 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M16.6 14c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.2-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.3.1-.1.1-.3 0-.4-.1-.1-.6-1.3-.8-1.8-.1-.7-.3-.7-.5-.7h-.5c-.2 0-.5.2-.6.3-.6.6-.9 1.3-.9 2.1.1.9.4 1.8 1 2.6.7.9 1.7 1.9 3.3 2.6.4.2.7.3.9.4.5.1 1 .1 1.4-.1.5-.2 1.3-.9 1.5-1.7.2-.8.2-1.4.1-1.6-.1-.2-.3-.3-.5-.4zm5.1-9.3C20.4 2.8 18.1 2 15.6 2 10.1 2 5.5 6.6 5.5 12.1c0 1.8.5 3.5 1.4 5L5 22l5.1-1.4c1.4.8 3.1 1.3 4.8 1.3h.1c5.5 0 10-4.5 10-10 .1-2.6-.8-5-2.7-6.9zM15.6 20c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.4-3-1.4-4.7 0-4.5 3.6-8.1 8.1-8.1 2.2 0 4.2.9 5.7 2.4 1.5 1.5 2.4 3.5 2.4 5.7.1 4.5-3.5 8.1-8 8.1z"/></svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-brand-primary text-brand-light py-10 text-center">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-lg mb-2 font-serif">B&B Casetta Ninfa</p>
+        <p class="mb-1 text-sm text-brand-secondary/80">Via di Mezzo, 9, 04013 Sermoneta (LT), Italia</p>
+        <p class="text-sm text-brand-secondary/80 lang-it">La tua fuga perfetta ti aspetta.</p>
+        <p class="text-sm text-brand-secondary/80 lang-en hidden">Your perfect escape awaits.</p>
+        <div class="mt-4">
+          <a href="#hero" class="mx-2 hover:text-brand-secondary lang-it">Home</a>
+          <a href="#hero" class="mx-2 hover:text-brand-secondary lang-en hidden">Home</a>
+          <span class="text-brand-secondary/50">|</span>
+          <a href="#about" class="mx-2 hover:text-brand-secondary lang-it">Chi Siamo</a>
+          <a href="#about" class="mx-2 hover:text-brand-secondary lang-en hidden">About Us</a>
+          <span class="text-brand-secondary/50">|</span>
+          <a href="#contact" class="mx-2 hover:text-brand-secondary lang-it">Contatti</a>
+          <a href="#contact" class="mx-2 hover:text-brand-secondary lang-en hidden">Contact</a>
+        </div>
+        <p class="text-sm mt-6 text-brand-secondary/70">
+          © <span id="currentYear"></span> B&B Casetta Ninfa. Tutti i diritti riservati.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
