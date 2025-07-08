@@ -6,33 +6,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setLanguage(lang) {
         htmlEl.lang = lang;
+        // Mostra/Nascondi elementi di testo
         const elementsToShow = document.querySelectorAll(`.lang-${lang}`);
         const elementsToHide = document.querySelectorAll(`.lang-${lang === 'it' ? 'en' : 'it'}`);
-
         elementsToShow.forEach(el => el.classList.remove('hidden'));
         elementsToHide.forEach(el => el.classList.add('hidden'));
 
+        // Gestisce l'attributo 'required' sui textarea
+        const textareaIT = document.getElementById('message-it');
+        const textareaEN = document.getElementById('message-en');
+        if (textareaIT && textareaEN) {
+            if (lang === 'it') {
+                textareaIT.required = true;
+                textareaEN.required = false;
+            } else {
+                textareaIT.required = false;
+                textareaEN.required = true;
+            }
+        }
         localStorage.setItem('preferredLanguage', lang);
     }
 
     langToggles.forEach(toggle => {
         if (toggle) {
             toggle.addEventListener('click', () => {
-                const currentLang = htmlEl.lang;
-                const newLang = currentLang === 'it' ? 'en' : 'it';
+                const newLang = htmlEl.lang === 'it' ? 'en' : 'it';
                 setLanguage(newLang);
             });
         }
     });
 
-    // On page load, check for saved language preference or default to browser language
     const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang) {
-        setLanguage(savedLang);
-    } else {
-        const browserLang = navigator.language.split('-')[0];
-        setLanguage(browserLang === 'en' ? 'en' : 'it'); // Default to 'it' if not 'en'
-    }
+    setLanguage(savedLang || 'it');
+
 
     // --- MOBILE MENU ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -47,19 +53,54 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
             mobileMenu.classList.toggle('hidden');
             menuIconSvg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="${isExpanded ? hamburgerIconPath : closeIconPath}" />`;
-            mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Apri menu' : 'Chiudi menu');
         });
 
-        const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
-        mobileNavLinks.forEach(link => {
+        mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
                 menuIconSvg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="${hamburgerIconPath}" />`;
-                mobileMenuButton.setAttribute('aria-label', 'Apri menu');
             });
         });
     }
+
+
+    // --- FORM SUBMISSION WITH SUCCESS MESSAGE ---
+    const contactForm = document.getElementById('contactForm');
+    const formContainer = document.getElementById('formContainer');
+    const successMessage = document.getElementById('successMessage');
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const data = new FormData(form);
+        
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                // Mostra il messaggio di successo e nascondi il form
+                if (formContainer) formContainer.classList.add('hidden');
+                if (successMessage) successMessage.classList.remove('hidden');
+                form.reset();
+            } else {
+                // Gestisci errori di rete o del server
+                alert("Si è verificato un errore. Riprova più tardi.");
+            }
+        } catch (error) {
+            // Gestisci errori di rete
+            alert("Si è verificato un errore di rete. Riprova più tardi.");
+        }
+    }
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", handleSubmit);
+    }
+    
 
     // --- FOOTER CURRENT YEAR ---
     const currentYearEl = document.getElementById('currentYear');
