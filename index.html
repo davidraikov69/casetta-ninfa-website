@@ -64,36 +64,37 @@
           <nav class="hidden md:flex items-center space-x-6">
             <a href="#hero" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Home</a>
             <a href="#hero" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">Home</a>
-
             <a href="#about" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Chi Siamo</a>
             <a href="#about" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">About Us</a>
-
             <a href="#gallery" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Galleria</a>
             <a href="#gallery" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">Gallery</a>
-
             <a href="#contact" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-it">Contatti</a>
             <a href="#contact" class="text-lg font-medium hover:text-brand-secondary transition-colors px-3 py-2 rounded-md lang-en hidden">Contact</a>
             
-             <!-- Language Toggle -->
-            <button id="lang-toggle" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-light">
+            <!-- ===== BLOCCO BANDIERE MODIFICATO ===== -->
+            <button id="lang-toggle" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-light" aria-label="Cambia lingua">
+                <!-- Mostra bandiera UK se la lingua è IT -->
                 <span class="lang-it">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="a"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#a)"><path fill="#eee" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 60 30"><clipPath id="a"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="b"><path d="M30 0v15h30V0zm0 15v15h30V15zM0 15v15h30V15zm0-15v15h30V0z"/></clipPath><g clip-path="url(#a)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#b)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg>
                 </span>
+                <!-- Mostra bandiera IT se la lingua è EN -->
                 <span class="lang-en hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="b"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#b)"><path fill="#eee" d="M0 0h512v256H0z"/><path fill="#0052b4" d="M0 256h512v256H0z"/><path fill="#eee" d="m205.2 205.2-41.4-41.4-23.5 23.5 41.4 41.4v-83h-46.9l41.4 41.4-41.4 41.4h46.9v-83l-41.4 41.4 41.4 41.4 23.5-23.5-41.4-41.4zm101.6 101.6 41.4 41.4 23.5-23.5-41.4-41.4v83h46.9l-41.4-41.4 41.4-41.4h-46.9v83l41.4-41.4-41.4-41.4-23.5 23.5 41.4 41.4z"/><path fill="#d80027" d="M496 233.1H329.4L512 94.3V233zm-480 45.8H182.6L0 417.7V278.9zM16 278.9H182.6L0 139.8v139.1zM496 45.8H329.4L512 184.2V45.8zM212.1 0l-55.5 121-55.5-121H0v16h111.4l45.2 98.6L201.7 16V0h10.4zm87.8 512 55.5-121L410.9 512H512v-16H400.6l-45.2-98.6-45.1 98.6v16h-10.5z"/><path fill="#eee" d="M341.3 0H170.7L0 121v135h121L0 341.3v170.7h170.7L341.3 512h170.7l-170.6-121V256h121L512 170.7V0z"/><path fill="#d80027" d="M233.1 16h45.8v480h-45.8zM16 233.1h480v45.8H16z"/></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="it-flag"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#it-flag)"><path fill="#eee" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>
                 </span>
             </button>
+            <!-- ====================================== -->
           </nav>
           <div class="md:hidden flex items-center">
-            <!-- Mobile Language Toggle -->
-            <button id="lang-toggle-mobile" class="p-2 mr-2 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-light">
-                 <span class="lang-it">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="a-mob"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#a-mob)"><path fill="#eee" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>
+            <!-- ===== BLOCCO BANDIERE MOBILE MODIFICATO ===== -->
+            <button id="lang-toggle-mobile" class="p-2 mr-2 rounded-full focus:outline-none" aria-label="Cambia lingua">
+                <span class="lang-it">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 60 30"><clipPath id="a-mob"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="b-mob"><path d="M30 0v15h30V0zm0 15v15h30V15zM0 15v15h30V15zm0-15v15h30V0z"/></clipPath><g clip-path="url(#a-mob)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#b-mob)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg>
                 </span>
                 <span class="lang-en hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="b-mob"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#b-mob)"><path fill="#eee" d="M0 0h512v256H0z"/><path fill="#0052b4" d="M0 256h512v256H0z"/><path fill="#eee" d="m205.2 205.2-41.4-41.4-23.5 23.5 41.4 41.4v-83h-46.9l41.4 41.4-41.4 41.4h46.9v-83l-41.4 41.4 41.4 41.4 23.5-23.5-41.4-41.4zm101.6 101.6 41.4 41.4 23.5-23.5-41.4-41.4v83h46.9l-41.4-41.4 41.4-41.4h-46.9v83l41.4-41.4-41.4-41.4-23.5 23.5 41.4 41.4z"/><path fill="#d80027" d="M496 233.1H329.4L512 94.3V233zm-480 45.8H182.6L0 417.7V278.9zM16 278.9H182.6L0 139.8v139.1zM496 45.8H329.4L512 184.2V45.8zM212.1 0l-55.5 121-55.5-121H0v16h111.4l45.2 98.6L201.7 16V0h10.4zm87.8 512 55.5-121L410.9 512H512v-16H400.6l-45.2-98.6-45.1 98.6v16h-10.5z"/><path fill="#eee" d="M341.3 0H170.7L0 121v135h121L0 341.3v170.7h170.7L341.3 512h170.7l-170.6-121V256h121L512 170.7V0z"/><path fill="#d80027" d="M233.1 16h45.8v480h-45.8zM16 233.1h480v45.8H16z"/></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><mask id="it-flag-mob"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#it-flag-mob)"><path fill="#eee" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>
                 </span>
             </button>
+            <!-- ========================================== -->
             <button id="mobile-menu-button" aria-label="Apri menu" aria-expanded="false" class="p-2 rounded-md hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-light">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" id="menu-icon-svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -118,6 +119,7 @@
     </header>
 
     <main class="flex-grow">
+      <!-- Sezioni Hero, About, Gallery (invariate) -->
       <!-- Hero Section -->
       <section id="hero" class="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white">
         <div class="absolute inset-0">
@@ -226,18 +228,12 @@
                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Email Address</label>
                 <input type="email" name="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg" placeholder="tu@esempio.com"/>
               </div>
-
-              <!-- ===== BLOCCO MESSAGGIO CORRETTO - SENZA 'REQUIRED' ===== -->
               <div>
                 <label for="message-it" class="block text-sm font-medium text-gray-700 mb-1 lang-it">Messaggio</label>
                 <label for="message-en" class="block text-sm font-medium text-gray-700 mb-1 lang-en hidden">Message</label>
-                
-                <textarea name="messaggio_italiano" id="message-it" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-it" placeholder="La tua richiesta o messaggio..."></textarea>
-                
+                <textarea name="messaggio_italiano" id="message-it" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-it" placeholder="La tua richiesta o messaggio..." required></textarea>
                 <textarea name="message_english" id="message-en" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg lang-en hidden" placeholder="Your request or message..."></textarea>
               </div>
-              <!-- ========================================================= -->
-              
               <div>
                 <button type="submit" class="w-full bg-brand-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg lang-it">Invia Messaggio</button>
                 <button type="submit" class="w-full bg-brand-primary hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg lang-en hidden">Send Message</button>
@@ -248,10 +244,18 @@
       </section>
     </main>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/393403927781?text=Ciao!%20Sono%20interessato%20al%20B&B%20Casetta%20Ninfa%20e%20vorrei%20saperne%20di%20più." target="_blank" rel="noopener noreferrer" aria-label="Chat su WhatsApp" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 z-40 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M16.6 14c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.2-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.3.1-.1.1-.3 0-.4-.1-.1-.6-1.3-.8-1.8-.1-.7-.3-.7-.5-.7h-.5c-.2 0-.5.2-.6.3-.6.6-.9 1.3-.9 2.1.1.9.4 1.8 1 2.6.7.9 1.7 1.9 3.3 2.6.4.2.7.3.9.4.5.1 1 .1 1.4-.1.5-.2 1.3-.9 1.5-1.7.2-.8.2-1.4.1-1.6-.1-.2-.3-.3-.5-.4zm5.1-9.3C20.4 2.8 18.1 2 15.6 2 10.1 2 5.5 6.6 5.5 12.1c0 1.8.5 3.5 1.4 5L5 22l5.1-1.4c1.4.8 3.1 1.3 4.8 1.3h.1c5.5 0 10-4.5 10-10 .1-2.6-.8-5-2.7-6.9zM15.6 20c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.4-3-1.4-4.7 0-4.5 3.6-8.1 8.1-8.1 2.2 0 4.2.9 5.7 2.4 1.5 1.5 2.4 3.5 2.4 5.7.1 4.5-3.5 8.1-8 8.1z"/></svg>
+    <!-- ===== PULSANTE WHATSAPP MODIFICATO ===== -->
+    <a href="https://wa.me/393403927781?text=Ciao!%20Sono%20interessato%20al%20B&B%20Casetta%20Ninfa%20e%20vorrei%20saperne%20di%20più." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contattaci su WhatsApp" 
+       class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#128C7E] text-white py-3 px-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-40 flex items-center justify-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M16.6 14c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.2-.5-.5-1-1.1-1.4-1.7-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.3.1-.1.1-.3 0-.4-.1-.1-.6-1.3-.8-1.8-.1-.7-.3-.7-.5-.7h-.5c-.2 0-.5.2-.6.3-.6.6-.9 1.3-.9 2.1.1.9.4 1.8 1 2.6.7.9 1.7 1.9 3.3 2.6.4.2.7.3.9.4.5.1 1 .1 1.4-.1.5-.2 1.3-.9 1.5-1.7.2-.8.2-1.4.1-1.6-.1-.2-.3-.3-.5-.4zm5.1-9.3C20.4 2.8 18.1 2 15.6 2 10.1 2 5.5 6.6 5.5 12.1c0 1.8.5 3.5 1.4 5L5 22l5.1-1.4c1.4.8 3.1 1.3 4.8 1.3h.1c5.5 0 10-4.5 10-10 .1-2.6-.8-5-2.7-6.9zM15.6 20c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.9-1.4-1.4-3-1.4-4.7 0-4.5 3.6-8.1 8.1-8.1 2.2 0 4.2.9 5.7 2.4 1.5 1.5 2.4 3.5 2.4 5.7.1 4.5-3.5 8.1-8 8.1z"/>
+      </svg>
+      <span class="font-semibold text-base hidden sm:inline">Contattaci su WhatsApp</span>
     </a>
+    <!-- ======================================= -->
 
     <!-- Footer -->
     <footer class="bg-brand-primary text-brand-light py-10 text-center">
