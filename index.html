@@ -10,7 +10,6 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- ===== NUOVA PALETTE COLORI ===== -->
     <script>
       tailwind.config = {
         theme: {
@@ -41,7 +40,14 @@
     <header class="bg-brand-primary/95 text-brand-light sticky top-0 z-50 shadow-lg backdrop-blur-md">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
-          <a href="#hero" class="text-2xl font-bold font-serif hover:text-brand-accent transition-colors">B&B Casetta Ninfa</a>
+          
+          <!-- ===== LOGO + TITOLO MODIFICATO ===== -->
+          <a href="#hero" class="flex items-center text-2xl font-bold font-serif hover:text-brand-accent transition-colors">
+            <img src="assets/logo.png" alt="Logo Casetta Ninfa" class="h-8 w-auto mr-3">
+            <span>B&B Casetta Ninfa</span>
+          </a>
+          <!-- ===================================== -->
+
           <nav class="hidden md:flex items-center space-x-6">
             <a href="#hero" class="text-lg font-medium hover:text-brand-accent transition-colors px-3 py-2 rounded-md lang-it">Home</a>
             <a href="#hero" class="text-lg font-medium hover:text-brand-accent transition-colors px-3 py-2 rounded-md lang-en hidden">Home</a>
@@ -86,7 +92,7 @@
         <section id="about" class="py-16 md:py-24 bg-brand-light">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-it">Benvenuti al B&B Casetta Ninfa</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-it">Benvenuti a Casetta Ninfa</h2>
                     <h2 class="text-4xl md:text-5xl font-bold text-brand-text font-serif lang-en hidden">Welcome to Casetta Ninfa</h2>
                     <div class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed lang-it">
                         <p class="mb-4">Situato a Sermoneta Scalo, il B&B Casetta Ninfa è il rifugio perfetto per chi cerca tranquillità senza rinunciare alla comodità. Le nostre camere, adatte anche per gli amici a quattro zampe, sono dotate di aria condizionata e bagno privato. Offriamo una deliziosa colazione italiana per iniziare al meglio la giornata.</p>
