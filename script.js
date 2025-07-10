@@ -3,21 +3,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- COOKIE BANNER ---
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptCookiesButton = document.getElementById('accept-cookies');
+    const rejectCookiesButton = document.getElementById('reject-cookies');
 
-    // Controlla se l'utente ha già accettato i cookie
-    if (!localStorage.getItem('cookiesAccepted')) {
+    // Funzione per nascondere il banner
+    const hideBanner = () => {
+        if (cookieBanner) {
+            cookieBanner.style.opacity = '0';
+            setTimeout(() => {
+                cookieBanner.classList.add('hidden');
+            }, 500); // Attendi la fine della transizione
+        }
+    };
+
+    // Controlla se l'utente ha già fatto una scelta
+    if (!localStorage.getItem('cookieChoice')) {
         if (cookieBanner) cookieBanner.classList.remove('hidden');
     }
 
     if (acceptCookiesButton) {
         acceptCookiesButton.addEventListener('click', () => {
-            localStorage.setItem('cookiesAccepted', 'true');
-            if (cookieBanner) {
-                cookieBanner.style.opacity = '0';
-                setTimeout(() => {
-                    cookieBanner.classList.add('hidden');
-                }, 500); // Attendi la fine della transizione
-            }
+            localStorage.setItem('cookieChoice', 'accepted');
+            hideBanner();
+        });
+    }
+    
+    if (rejectCookiesButton) {
+        rejectCookiesButton.addEventListener('click', () => {
+            localStorage.setItem('cookieChoice', 'rejected');
+            hideBanner();
         });
     }
 
