@@ -1,18 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- COOKIE BANNER ---
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+
+    // Controlla se l'utente ha già accettato i cookie
+    if (!localStorage.getItem('cookiesAccepted')) {
+        if (cookieBanner) cookieBanner.classList.remove('hidden');
+    }
+
+    if (acceptCookiesButton) {
+        acceptCookiesButton.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            if (cookieBanner) {
+                cookieBanner.style.opacity = '0';
+                setTimeout(() => {
+                    cookieBanner.classList.add('hidden');
+                }, 500); // Attendi la fine della transizione
+            }
+        });
+    }
+
     // --- LANGUAGE TOGGLE ---
     const langToggles = [document.getElementById('lang-toggle'), document.getElementById('lang-toggle-mobile')];
     const htmlEl = document.documentElement;
 
     function setLanguage(lang) {
         htmlEl.lang = lang;
-        // Mostra/Nascondi elementi di testo
         const elementsToShow = document.querySelectorAll(`.lang-${lang}`);
         const elementsToHide = document.querySelectorAll(`.lang-${lang === 'it' ? 'en' : 'it'}`);
         elementsToShow.forEach(el => el.classList.remove('hidden'));
         elementsToHide.forEach(el => el.classList.add('hidden'));
 
-        // Gestisce l'attributo 'required' sui textarea
         const textareaIT = document.getElementById('message-it');
         const textareaEN = document.getElementById('message-en');
         if (textareaIT && textareaEN) {
@@ -54,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('hidden');
             menuIconSvg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="${isExpanded ? hamburgerIconPath : closeIconPath}" />`;
         });
-
         mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -63,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
 
     // --- FORM SUBMISSION WITH SUCCESS MESSAGE ---
     const contactForm = document.getElementById('contactForm');
@@ -74,34 +91,27 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const form = event.target;
         const data = new FormData(form);
-        
         try {
             const response = await fetch(form.action, {
                 method: form.method,
                 body: data,
                 headers: { 'Accept': 'application/json' }
             });
-
             if (response.ok) {
-                // Mostra il messaggio di successo e nascondi il form
                 if (formContainer) formContainer.classList.add('hidden');
                 if (successMessage) successMessage.classList.remove('hidden');
                 form.reset();
             } else {
-                // Gestisci errori di rete o del server
                 alert("Si è verificato un errore. Riprova più tardi.");
             }
         } catch (error) {
-            // Gestisci errori di rete
             alert("Si è verificato un errore di rete. Riprova più tardi.");
         }
     }
-
     if (contactForm) {
         contactForm.addEventListener("submit", handleSubmit);
     }
     
-
     // --- FOOTER CURRENT YEAR ---
     const currentYearEl = document.getElementById('currentYear');
     if (currentYearEl) {
