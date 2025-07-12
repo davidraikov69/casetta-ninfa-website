@@ -5,59 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dintorni di Sermoneta - B&B Casetta Ninfa</title>
     <meta name="description" content="Scopri cosa vedere vicino al nostro B&B: dai Giardini di Ninfa ai borghi medievali di Sermoneta e Norma. La guida locale di Casetta Ninfa.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,...">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'brand-primary': '#2C3E50', 'brand-secondary': '#EAEAEA', 'brand-accent': '#3498DB', 'brand-text': '#34495E', 'brand-light': '#FDFEFE',
-            },
-            fontFamily: { sans: ['"Inter"', 'sans-serif'], serif: ['"Lora"', 'serif'], }
-          }
-        }
-      }
+      tailwind.config = { theme: { extend: { colors: {'brand-primary': '#2C3E50', 'brand-secondary': '#EAEAEA', 'brand-accent': '#3498DB', 'brand-text': '#34495E', 'brand-light': '#FDFEFE'}, fontFamily: { sans: ['"Inter"', 'sans-serif'], serif: ['"Lora"', 'serif'] } } } }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>.hidden{display:none}</style>
 </head>
 <body class="font-sans text-brand-text bg-brand-secondary">
     <header class="bg-brand-primary/95 text-brand-light sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-              <a href="index.html" class="flex items-center text-2xl font-bold font-serif hover:text-brand-accent transition-colors">
-                <img src="assets/logo.png" alt="Logo Casetta Ninfa" class="h-8 w-auto mr-3">
-                <span>B&B Casetta Ninfa</span>
-              </a>
-              <a href="index.html#contact" class="bg-brand-accent hover:bg-opacity-80 text-white font-semibold py-2 px-5 rounded-lg text-base transition-colors">Prenota Ora</a>
+              <a href="index.html" class="flex items-center text-2xl font-bold font-serif hover:text-brand-accent transition-colors"><img src="assets/logo.png" alt="Logo Casetta Ninfa" class="h-8 w-auto mr-3"><span>B&B Casetta Ninfa</span></a>
+              <a href="index.html#contact" class="bg-brand-accent hover:bg-opacity-80 text-white font-semibold py-2 px-5 rounded-lg text-base transition-colors lang-it">Prenota Ora</a>
+              <a href="index.html#contact" class="bg-brand-accent hover:bg-opacity-80 text-white font-semibold py-2 px-5 rounded-lg text-base transition-colors lang-en hidden">Book Now</a>
             </div>
         </div>
     </header>
     <main>
         <div class="container mx-auto max-w-5xl py-12 px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold font-serif text-brand-primary">Scopri i Dintorni</h1>
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Sermoneta è un punto di partenza strategico per esplorare alcune delle meraviglie più affascinanti del Lazio. Ecco le nostre guide per aiutarti a pianificare il tuo viaggio.</p>
+                <h1 class="text-4xl md:text-5xl font-bold font-serif text-brand-primary lang-it">Scopri i Dintorni</h1>
+                <h1 class="text-4xl md:text-5xl font-bold font-serif text-brand-primary lang-en hidden">Explore the Surroundings</h1>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto lang-it">Sermoneta è un punto di partenza strategico per esplorare alcune delle meraviglie più affascinanti del Lazio. Ecco le nostre guide per aiutarti a pianificare il tuo viaggio.</p>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto lang-en hidden">Sermoneta is a strategic starting point for exploring some of the most fascinating wonders of the Lazio region. Here are our guides to help you plan your trip.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="guida-giardini-ninfa.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                    <img src="assets/ninfa-card.jpg" alt="Ponte romano nei Giardini di Ninfa" class="h-48 w-full object-cover">
-                    <div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">Guida ai Giardini di Ninfa</h2><p class="mt-2 text-gray-600 flex-grow">Tutto quello che devi sapere per visitare il giardino più bello del mondo: orari, biglietti e consigli.</p><span class="mt-4 font-semibold text-brand-accent self-start">Leggi la guida →</span></div>
-                </a>
-                <a href="guida-sermoneta.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                    <img src="assets/sermoneta-card.jpg" alt="Veduta del borgo medievale di Sermoneta con il castello" class="h-48 w-full object-cover">
-                    <div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">Il Borgo di Sermoneta</h2><p class="mt-2 text-gray-600 flex-grow">Una guida al castello, ai vicoli e alle chiese di uno dei borghi meglio conservati d'Italia.</p><span class="mt-4 font-semibold text-brand-accent self-start">Scopri il borgo →</span></div>
-                </a>
-                <a href="guida-norma.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group">
-                    <img src="assets/norma-card.jpg" alt="Panorama dal borgo di Norma sulla pianura pontina" class="h-48 w-full object-cover">
-                    <div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">Il Borgo di Norma</h2><p class="mt-2 text-gray-600 flex-grow">Scopri il "balcone" sulla pianura pontina, l'area archeologica e il museo del cioccolato.</p><span class="mt-4 font-semibold text-brand-accent self-start">Esplora Norma →</span></div>
-                </a>
+            
+            <!-- Griglia in Italiano -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lang-it">
+                <a href="guida-giardini-ninfa-it.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group"><img src="assets/ninfa-card.jpg" alt="Ponte romano nei Giardini di Ninfa" class="h-48 w-full object-cover"><div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">Guida ai Giardini di Ninfa</h2><p class="mt-2 text-gray-600 flex-grow">Tutto quello che devi sapere per visitare il giardino più bello del mondo: orari, biglietti e consigli.</p><span class="mt-4 font-semibold text-brand-accent self-start">Leggi la guida →</span></div></a>
+                <a href="guida-sermoneta-it.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group"><img src="assets/sermoneta-card.jpg" alt="Veduta del borgo medievale di Sermoneta" class="h-48 w-full object-cover"><div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">Il Borgo di Sermoneta</h2><p class="mt-2 text-gray-600 flex-grow">Una guida al castello, ai vicoli e alle chiese di uno dei borghi meglio conservati d'Italia.</p><span class="mt-4 font-semibold text-brand-accent self-start">Scopri il borgo →</span></div></a>
+                <a href="guida-norma-it.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group"><img src="assets/norma-card.jpg" alt="Panorama dal borgo di Norma" class="h-48 w-full object-cover"><div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">Il Borgo di Norma</h2><p class="mt-2 text-gray-600 flex-grow">Scopri il "balcone" sulla pianura pontina, l'area archeologica e il museo del cioccolato.</p><span class="mt-4 font-semibold text-brand-accent self-start">Esplora Norma →</span></div></a>
+            </div>
+
+            <!-- Griglia in Inglese -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lang-en hidden">
+                <a href="guida-giardini-ninfa-en.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group"><img src="assets/ninfa-card.jpg" alt="Roman bridge in the Garden of Ninfa" class="h-48 w-full object-cover"><div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">Guide to the Garden of Ninfa</h2><p class="mt-2 text-gray-600 flex-grow">Everything you need to know to visit the most beautiful garden in the world: opening hours, tickets, and tips.</p><span class="mt-4 font-semibold text-brand-accent self-start">Read the guide →</span></div></a>
+                <a href="guida-sermoneta-en.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group"><img src="assets/sermoneta-card.jpg" alt="View of the medieval village of Sermoneta" class="h-48 w-full object-cover"><div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">The Village of Sermoneta</h2><p class="mt-2 text-gray-600 flex-grow">A guide to the castle, alleys, and churches of one of Italy's best-preserved medieval villages.</p><span class="mt-4 font-semibold text-brand-accent self-start">Discover the village →</span></div></a>
+                <a href="guida-norma-en.html" class="bg-brand-light rounded-xl shadow-lg overflow-hidden flex flex-col group"><img src="assets/norma-card.jpg" alt="View from the village of Norma" class="h-48 w-full object-cover"><div class="p-6 flex-grow flex flex-col"><h2 class="text-2xl font-serif font-bold text-brand-text group-hover:text-brand-accent transition-colors">The Village of Norma</h2><p class="mt-2 text-gray-600 flex-grow">Discover the "balcony" over the Pontine plain, the archaeological site, and the chocolate museum.</p><span class="mt-4 font-semibold text-brand-accent self-start">Explore Norma →</span></div></a>
             </div>
         </div>
     </main>
-    <footer class="bg-brand-primary text-brand-light py-8 text-center mt-12"><div class="container mx-auto px-4"><p>© <span id="currentYear"></span> B&B Casetta Ninfa. Tutti i diritti riservati. | <a href="privacy.html" class="underline hover:text-brand-accent">Privacy Policy</a></p></div></footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <footer class="bg-brand-primary text-brand-light py-8 text-center mt-12"><div class="container mx-auto px-4"><p>© <span id="currentYear"></span> B&B Casetta Ninfa. All rights reserved. | <a href="privacy.html" class="underline hover:text-brand-accent">Privacy Policy</a></p></div></footer>
+    <script src="script.js"></script>
 </body>
 </html>
