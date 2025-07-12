@@ -1,1 +1,61 @@
-
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosa Vedere a Sermoneta: Guida al Borgo - B&B Casetta Ninfa</title>
+    <meta name="description" content="Una guida completa per visitare Sermoneta, uno dei borghi medievali meglio conservati d'Italia. Scopri il Castello Caetani, la Cattedrale e i vicoli incantati.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {'brand-primary': '#2C3E50', 'brand-secondary': '#EAEAEA', 'brand-accent': '#3498DB', 'brand-text': '#34495E', 'brand-light': '#FDFEFE'},
+            fontFamily: { sans: ['"Inter"', 'sans-serif'], serif: ['"Lora"', 'serif'] }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.x/dist/typography.min.css" rel="stylesheet">
+</head>
+<body class="font-sans text-brand-text bg-brand-secondary">
+    <header class="bg-brand-primary/95 text-brand-light sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+              <a href="index.html" class="flex items-center text-2xl font-bold font-serif hover:text-brand-accent transition-colors"><img src="assets/logo.png" alt="Logo Casetta Ninfa" class="h-8 w-auto mr-3"><span>B&B Casetta Ninfa</span></a>
+              <a href="index.html#contact" class="bg-brand-accent hover:bg-opacity-80 text-white font-semibold py-2 px-5 rounded-lg text-base transition-colors">Prenota Ora</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="container mx-auto max-w-3xl py-12 px-4 sm:px-6 lg:px-8">
+            <img src="assets/sermoneta-hero.jpg" alt="Il Castello Caetani che domina il borgo di Sermoneta" class="w-full h-64 object-cover rounded-xl shadow-lg mb-8">
+            <div class="prose prose-lg max-w-none prose-h2:font-serif prose-h2:text-brand-primary prose-a:text-brand-accent">
+                <h1>Visitare Sermoneta: Guida al Borgo Medievale</h1>
+                <p class="lead">Sermoneta è un gioiello intatto, un tuffo nel Medioevo a pochi chilometri dal mare e da Roma. Con il suo imponente castello, le mura antiche e i vicoli acciottolati, questo borgo offre un'esperienza autentica e affascinante. Dal nostro B&B, il centro storico è facilmente raggiungibile, rendendoci la base perfetta per la vostra esplorazione.</p>
+                <h2>Il Castello Caetani: Il Cuore del Borgo</h2>
+                <p>Dominando il paesaggio, il Castello Caetani è il simbolo di Sermoneta. Costruito nel XIII secolo, è una delle fortezze meglio conservate del Lazio. La visita guidata è d'obbligo per scoprire le sue sale, le prigioni e i camminamenti di ronda da cui si gode una vista mozzafiato sulla pianura pontina.</p>
+                <ul>
+                    <li><strong>Biglietti e Orari:</strong> Le informazioni aggiornate sono disponibili sul sito della Fondazione Roffredo Caetani, che gestisce anche il castello.</li>
+                    <li><strong>Eventi:</strong> Durante l'anno, il castello ospita rievocazioni storiche, mostre e concerti. Controlla il calendario prima della tua visita!</li>
+                </ul>
+                <h2>Perdersi tra i Vicoli: Cosa Non Perdere</h2>
+                <p>Il modo migliore per scoprire Sermoneta è camminare senza una meta precisa. Tuttavia, ci sono alcuni punti che meritano una visita:</p>
+                <ul>
+                    <li><strong>Cattedrale di Santa Maria Assunta:</strong> Un bellissimo esempio di architettura romanico-gotica con un imponente campanile.</li>
+                    <li><strong>Loggia dei Mercanti:</strong> Un affascinante porticato del XV secolo, un tempo cuore pulsante del commercio cittadino.</li>
+                    <li><strong>Sinagoga Ebraica:</strong> Testimonianza della vivace comunità ebraica che abitava il borgo nel Medioevo.</li>
+                    <li><strong>Belvedere:</strong> Un punto panoramico da cui ammirare un tramonto spettacolare.</li>
+                </ul>
+                <div class="mt-12 not-prose p-6 bg-brand-light rounded-xl text-center border border-brand-secondary"><h3 class="font-serif font-bold text-2xl text-brand-text">Vivi la Storia, Dormi nel Comfort</h3><p class="mt-2 text-gray-700">Dopo una giornata a spasso nel tempo, torna alla tranquillità del B&B Casetta Ninfa. Ti aspettiamo per offrirti un soggiorno indimenticabile.</p><a href="index.html#contact" class="mt-4 inline-block bg-brand-accent text-white font-semibold py-2 px-6 rounded-lg hover:bg-opacity-90 transition-colors">Richiedi Disponibilità</a></div>
+            </div>
+        </article>
+    </main>
+    <footer class="bg-brand-primary text-brand-light py-8 text-center mt-12"><div class="container mx-auto px-4"><p>© <span id="currentYear"></span> B&B Casetta Ninfa. Tutti i diritti riservati. | <a href="privacy.html" class="underline hover:text-brand-accent">Privacy Policy</a></p></div></footer>
+    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+</body>
+</html>
